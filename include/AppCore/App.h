@@ -149,6 +149,11 @@ public:
   virtual Ref<Renderer> renderer() = 0;
 
   ///
+  /// Get the underlying GPU texture of the view.
+  ///
+  virtual void* view_texture_pointer(Ref<View> view) = 0;
+
+  ///
   /// Run the main loop.
   ///
   virtual void Run() = 0;

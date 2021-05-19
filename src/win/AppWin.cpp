@@ -131,6 +131,10 @@ Ref<Renderer> AppWin::renderer() {
   return *renderer_.get();
 }
 
+void* AppWin::view_texture_pointer(Ref<View> view) {
+  return gpu_driver_->GetTexturePointer(view->render_target().texture_id);
+}
+
 void AppWin::Run() {
   if (is_running_)
     return;

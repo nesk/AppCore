@@ -124,6 +124,10 @@ Ref<Renderer> AppGLFW::renderer() {
   return *renderer_.get();
 }
 
+void* AppGLFW::view_texture_pointer(Ref<View> view) {
+  return nullptr;
+}
+
 void AppGLFW::Run() {
   if (is_running_)
    return;

@@ -161,6 +161,11 @@ ACExport ULMonitor ulAppGetMainMonitor(ULApp app);
 ACExport ULRenderer ulAppGetRenderer(ULApp app);
 
 ///
+/// Get the underlying GPU texture of the view.
+///
+ACExport void* ulAppGetViewTexturePointer(ULApp app, ULView view);
+
+///
 /// Run the main loop.
 ///
 ACExport void ulAppRun(ULApp app);

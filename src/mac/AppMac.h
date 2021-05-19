@@ -19,7 +19,7 @@ class AppMac : public App,
                public RefCountedImpl<AppMac> {
 public:
   // Inherited from App
-                   
+
   virtual const Settings& settings() const override { return settings_; }
 
   virtual void set_listener(AppListener* listener) override { listener_ = listener; }
@@ -31,6 +31,8 @@ public:
   virtual Monitor* main_monitor() override;
 
   virtual Ref<Renderer> renderer() override;
+
+  virtual void* view_texture_pointer(Ref<View> view) override;
 
   virtual void Run() override;
 

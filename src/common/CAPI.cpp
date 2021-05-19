@@ -141,6 +141,10 @@ ULRenderer ulAppGetRenderer(ULApp app) {
   return app->c_renderer;
 }
 
+void* ulAppGetViewTexturePointer(ULApp app, ULView view) {
+  return app->val->view_texture_pointer(C_UnwrapView(view));
+}
+
 void ulAppRun(ULApp app) {
   app->val->Run();
 }

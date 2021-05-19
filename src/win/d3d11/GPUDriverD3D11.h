@@ -23,8 +23,10 @@ class GPUDriverD3D11 : public GPUDriverImpl {
 
   // Inherited from GPUDriver:
 
-  virtual void CreateTexture(uint32_t texture_id, Ref<Bitmap> bitmap) override;
+  void* GetTexturePointer(uint32_t texture_id);
 
+  virtual void CreateTexture(uint32_t texture_id, Ref<Bitmap> bitmap) override;
+  
   virtual void UpdateTexture(uint32_t texture_id, Ref<Bitmap> bitmap) override;
 
   virtual void DestroyTexture(uint32_t texture_id) override;

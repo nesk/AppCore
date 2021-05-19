@@ -128,6 +128,10 @@ Ref<Renderer> AppMac::renderer() {
   return *renderer_.get();
 }
 
+void* AppMac::view_texture_pointer(Ref<View> view) {
+  return nullptr;
+}
+
 void AppMac::Run() {
   if (is_running_)
     return;

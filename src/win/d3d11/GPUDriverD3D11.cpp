@@ -114,6 +114,14 @@ GPUDriverD3D11::GPUDriverD3D11(GPUContextD3D11* context) : context_(context) { }
 
 GPUDriverD3D11::~GPUDriverD3D11() { }
 
+void* GPUDriverD3D11::GetTexturePointer(uint32_t texture_id) {
+  try {
+    return (void*)textures_.at(texture_id).texture.Get();
+  } catch (std::out_of_range e) {
+    return nullptr;
+  }
+}
+
 void GPUDriverD3D11::CreateTexture(uint32_t texture_id, Ref<Bitmap> bitmap) {
   auto i = textures_.find(texture_id);
   if (i != textures_.end()) {

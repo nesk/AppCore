@@ -38,6 +38,8 @@ class AppWin : public App, public RefCountedImpl<AppWin> {
 
   virtual Ref<Renderer> renderer() override;
 
+  virtual void* view_texture_pointer(Ref<View> view) override;
+
   virtual void Run() override;
 
   virtual void Quit() override;
